@@ -1,7 +1,8 @@
-import React, { useState,useEffect, useDispatch } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ProductList.css'
 import CartItem from './CartItem';
 import { addItem } from './CartSlice';
+import { useDispatch } from "react-redux";
 
 function ProductList() {
     const [showCart, setShowCart] = useState(false); 
