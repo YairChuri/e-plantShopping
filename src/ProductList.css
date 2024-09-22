@@ -77,7 +77,27 @@ body {
     
     gap: 20px;
 }
+.cart-container {
+    position: relative; /* This makes the container the reference for absolutely positioned children */
+    display: inline-block; /* Ensures the container only takes up the space of its content */
+}
 
+.cart-icon {
+    height: 68px; /* Height of the cart icon */
+    width: 68px; /* Width of the cart icon */
+}
+.cart-label {
+    position: absolute; /* Position the label absolutely */
+    top: 5px; /* Distance from the top of the container */
+    right: 5px; /* Distance from the right of the container */
+    background-color: red; /* Background color of the label */
+    color: white; /* Text color of the label */
+    border-radius: 50%; /* Make the label circular */
+    padding: 5px 10px; /* Padding around the text */
+    font-size: 14px; /* Font size of the label */
+    font-weight: bold; /* Bold text */
+    transform: translate(-50%, 50%); /* Adjust position for better centering */
+}
 /* Pseudo-classes - Hover effect on product button */
 .product-card:hover {
     transform: scale(1.05);
@@ -106,7 +126,7 @@ body {
     /*height: 200px; /* Adjust height for better consistency */
 
 }
-
+/*
 .product-button {
     background-color: #e74c3c;
     color: #fff;
@@ -120,7 +140,7 @@ body {
 .product-button:hover {
     background-color: #c0392b;
 }
-
+*/
 /* Pseudo-elements - Sale badge */
 .product-card::before {
     content: "SALE";
@@ -225,8 +245,18 @@ body {
     background-color: #45a049;
   }
   
-  .product-button.added-to-cart {
-    background-color: grey; /* Grey when product is added */
+  .product-button-added-to-cart {
+    background-color: gray; /* Grey when product is added */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
   }
   @media (max-width: 1200px) {
     .product-card {
